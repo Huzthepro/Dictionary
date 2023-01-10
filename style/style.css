@@ -4,13 +4,22 @@
 }
 body{
   font-family: 'Nunito', sans-serif;
-  box-sizing: border-box;
+  box-sizing: border-box; /* for borders to not effect size */
   background-color: #202124;
   color: #bdc1c6;
 }
+#logo-section{
+  margin-top: 10vh;
+  text-align: center;
+}
+#logo{
+  width: 5rem;
+}
+
+/* ------------ INPUT ------------ */
 #input-section{
 /* position */
-  margin-top: 30vh;
+  margin-top: 3rem;
   margin-bottom: 2vh;
   /* size */
   width: 100%;
@@ -60,9 +69,7 @@ body{
 }
 
 
-
-
-
+/* ------------ RESULT ------------ */
 #result-section{
   /* position */
   display: flex;
@@ -71,7 +78,6 @@ body{
   /* size */
   width: 100%;
 }
-
 
 #result-container{
   width: 40%;
@@ -90,11 +96,10 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  width: 60%;
   margin: auto;
   padding: 1rem;
-
+  /* size */
+  width: 60%;
 }
 
 #audio-button{
@@ -102,21 +107,38 @@ body{
   cursor: pointer;
 }
 #audio-button:hover{
-  color: white;
+  color: #eef0f3;
 }
 
 #meaning{
-  text-indent: 1em;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  text-indent: 1em; /* for text to start after blank space */
   font-size: 1.2em;
 }
 
 #example{
-  border-top: solid 5px rgb(32, 36, 91);
-  font-style: italic;
   padding-top: 0.5rem;
+  
+  font-style: italic;
   font-size: 0.9em;
-  color: #bdc1c6b0;
+  color: #bdc1c69d;
+
+  border-top: solid 5px rgb(32, 36, 91);
 }
 
+
+
+/* ------------ RESPONSIVE ------------ */
+@media screen and (max-width: 800px) {
+  
+  #result-container{
+    width: 60%;
+  }
+  #meaning{
+    font-size: 1em;
+  }
+  #example{
+    font-size: 0.7em;
+  }
+}
