@@ -15,17 +15,18 @@ import {
   MEANING,
   EXAMPLE,
 } from '../constants.js';
-//import { createDictionaryPageElement } from '../pages/dictionary-view.js';
 
 export const initDictionaryPage = () => {
   //clearing body before use
   const body = document.body;
   body.innerHTML = '';
 
-  //Searching option
+  // ------------------ ↓ Input Section ↓ ------------------
+
   //Input section
   const inputSection = document.createElement('div');
   inputSection.id = INPUT_SECTION;
+  body.appendChild(inputSection);
   //Input container
   const inputContainer = document.createElement('div');
   inputContainer.id = INPUT_CONTAINER;
@@ -41,14 +42,14 @@ export const initDictionaryPage = () => {
   searchButton.id = SEARCH_BUTTON_ID;
   searchButton.innerHTML = SEARCH_BUTTON_TEXT;
   inputContainer.appendChild(searchButton);
-  searchButton.addEventListener('click', search);
 
-  body.appendChild(inputSection);
+  searchButton.addEventListener('click', search); // ← ← Click on Search
 
-  //Search Function
+  // ↓ Search Function ↓
   async function search() {
     const inputValue = inputElement.value;
-    inputElement.value = '';
+    inputElement.value = ''; // ← ← Previous result should have been cleaned
+
     try {
       const fetchedData = await fetchUrl(inputValue);
       console.log(fetchedData);
@@ -127,16 +128,7 @@ export const initDictionaryPage = () => {
         }
       });
     });
-    //   fetchedData[0].meanings[1].definitions[0].example || '- -';
     resultContainer.appendChild(example);
-    // <div id="result-container">
-    //   <div id="result-block">
-    //     <h1>Result</h1>
-    //     <h4>how to say it</h4>
-    //     <h2>Meaning</h2>
-    //     <h3>example</h3>
-    //   </div>putValue
-    // </div>
   }
 };
 
@@ -157,5 +149,3 @@ function fetchUrl(inputValue) {
       return error;
     });
 }
-
-//const startQuiz = () => { initQuestionPage();};
