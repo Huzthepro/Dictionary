@@ -1,0 +1,122 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  font-family: 'Nunito', sans-serif;
+  box-sizing: border-box;
+  background-color: #202124;
+  color: #bdc1c6;
+}
+#input-section{
+/* position */
+  margin-top: 30vh;
+  margin-bottom: 2vh;
+  /* size */
+  width: 100%;
+}
+#input-container{
+  /* position */
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+   /* size */
+  width:fit-content;
+  padding: 0.3rem;
+  /* design */
+  border-radius: 10rem;
+  border: 2px solid rgba(255, 255, 255, 0.311);
+  background-color: rgba(255, 255, 255, 0);
+}
+#user-input{
+  /* position */
+  padding-left: 0.6rem;
+  /* size */
+  height: 1.2rem;
+  /* design */
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  color: #bdc1c6;
+
+  background-color: #20212400;
+  outline: none;
+  border: none;
+}
+
+#search-button{
+  padding: 0.2rem;
+  cursor: pointer;
+}
+#search-button:hover{
+  color: #eef0f3;
+}
+#input-container:focus-within{
+  border: 2px solid rgba(255, 255, 255, 0.311);
+  outline: none;
+  background-color: rgba(50, 50, 50, 0.196);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+
+
+
+
+#result-section{
+  /* position */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* size */
+  width: 100%;
+}
+
+
+#result-container{
+  width: 40%;
+  padding: 1rem;
+  border-top:solid 1px #bdc1c6;
+}
+
+#searched-word{
+  padding-top: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#pronunciation-block{
+  /* position */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 60%;
+  margin: auto;
+  padding: 1rem;
+
+}
+
+#audio-button{
+  font-size: larger;
+  cursor: pointer;
+}
+#audio-button:hover{
+  color: white;
+}
+
+#meaning{
+  text-indent: 1em;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.2em;
+}
+
+#example{
+  border-top: solid 5px rgb(32, 36, 91);
+  font-style: italic;
+  padding-top: 0.5rem;
+  font-size: 0.9em;
+  color: #bdc1c6b0;
+}
+
