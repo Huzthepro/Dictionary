@@ -1,6 +1,6 @@
 export const LOGO_SECTION = 'logo-section';
 export const LOGO = 'logo';
-export const LOGO_SRC = '../images/dict-logo.png';
+export const LOGO_SRC = './images/dict-logo.png';
 export const LOGO_ALT = 'Dictionary Logo';
 export const INPUT_SECTION = 'input-section';
 export const INPUT_CONTAINER = 'input-container';

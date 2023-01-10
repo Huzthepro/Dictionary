@@ -32,7 +32,7 @@ export const initDictionaryPage = () => {
   //Logo
   const logo = document.createElement('img');
   logo.id = LOGO;
-  logo.src = '../images/dict-logo.png';
+  logo.src = LOGO_SRC;
   logo.alt = LOGO_ALT;
   logoSection.appendChild(logo);
 
